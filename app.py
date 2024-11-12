@@ -1,5 +1,4 @@
 import time
-
 import torch
 
 from easyanimate.api.api import (infer_forward_api,
@@ -48,7 +47,11 @@ if __name__ == "__main__":
 
     # launch gradio
     app, _, _ = demo.queue(status_update_rate=1).launch(
-        prevent_thread_lock=True,inbrowser=True
+        prevent_thread_lock=True,
+        inbrowser=True,
+        share=True,
+        server_name=server_name,
+        server_port=server_port
     )
     
     # launch api

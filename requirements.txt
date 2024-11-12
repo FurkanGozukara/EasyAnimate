@@ -3,10 +3,8 @@ einops
 safetensors
 timm
 tomesd
-torch>=2.1.2
 torchdiffeq
 torchsde
-xformers
 decord
 datasets
 numpy

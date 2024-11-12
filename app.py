@@ -19,7 +19,7 @@ if __name__ == "__main__":
     # 
     # "sequential_cpu_offload" means that each layer of the model will be moved to the CPU after use, 
     # resulting in slower speeds but saving a large amount of GPU memory.
-    GPU_memory_mode = "model_cpu_offload"
+    GPU_memory_mode = "model_cpu_offload_and_qfloat8"
     # Use torch.float16 if GPU does not support torch.bfloat16
     # ome graphics cards, such as v100, 2080ti, do not support torch.bfloat16
     weight_dtype = torch.bfloat16
@@ -48,9 +48,7 @@ if __name__ == "__main__":
 
     # launch gradio
     app, _, _ = demo.queue(status_update_rate=1).launch(
-        server_name=server_name,
-        server_port=server_port,
-        prevent_thread_lock=True
+        prevent_thread_lock=True,inbrowser=True
     )
     
     # launch api

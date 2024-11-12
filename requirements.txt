@@ -19,6 +19,7 @@ tensorboard
 beautifulsoup4
 ftfy
 func_timeout
+cpuinfo
 deepspeed
 accelerate>=0.25.0
 gradio>=3.41.2,<=3.48.0

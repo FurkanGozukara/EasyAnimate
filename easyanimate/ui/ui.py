@@ -812,7 +812,7 @@ def ui(GPU_memory_mode, weight_dtype):
                             elem_id="i2v_start", sources="upload", type="filepath", 
                         )
                         
-                        template_gallery_path = ["asset/1.png", "asset/2.png", "asset/3.png", "asset/4.png", "asset/5.png"]
+                        template_gallery_path = ["asset/1.png", "asset/2.png", "asset/4.png", "asset/5.png"]
                         def select_template(evt: gr.SelectData):
                             text = {
                                 "asset/1.png": "The dog is shaking head. The video is of high quality, and the view is very clear. High quality, masterpiece, best quality, highres, ultra-detailed, fantastic.", 
@@ -1503,7 +1503,7 @@ def ui_modelscope(model_type, edition, config_path, model_name, savedir_sample, 
                             with gr.Row():
                                 start_image = gr.Image(label="The image at the beginning of the video (图片到视频的开始图片)", show_label=True, elem_id="i2v_start", sources="upload", type="filepath")
                             
-                            template_gallery_path = ["asset/1.png", "asset/2.png", "asset/3.png", "asset/4.png", "asset/5.png"]
+                            template_gallery_path = ["asset/1.png", "asset/2.png", "asset/4.png", "asset/5.png"]
                             def select_template(evt: gr.SelectData):
                                 text = {
                                     "asset/1.png": "The dog is shaking head. The video is of high quality, and the view is very clear. High quality, masterpiece, best quality, highres, ultra-detailed, fantastic.", 
@@ -1918,7 +1918,7 @@ def ui_eas(edition, config_path, model_name, savedir_sample):
                         with gr.Column(visible = False) as image_to_video_col:
                             start_image = gr.Image(label="The image at the beginning of the video", show_label=True, elem_id="i2v_start", sources="upload", type="filepath")
                             
-                            template_gallery_path = ["asset/1.png", "asset/2.png", "asset/3.png", "asset/4.png", "asset/5.png"]
+                            template_gallery_path = ["asset/1.png", "asset/2.png",  "asset/4.png", "asset/5.png"]
                             def select_template(evt: gr.SelectData):
                                 text = {
                                     "asset/1.png": "The dog is shaking head. The video is of high quality, and the view is very clear. High quality, masterpiece, best quality, highres, ultra-detailed, fantastic.", 

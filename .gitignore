@@ -16,7 +16,11 @@ __pycache__/
 .Python
 build/
 develop-eggs/
+
+/asset
+/asset*
 .vs
+asset/3.png
 dist/
 downloads/
 eggs/

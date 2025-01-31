@@ -1,5 +1,5 @@
 import time
-
+import argparse
 import torch
 
 from easyanimate.api.api import (infer_forward_api,
@@ -8,6 +8,10 @@ from easyanimate.api.api import (infer_forward_api,
 from easyanimate.ui.ui import ui, ui_eas, ui_modelscope
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--share', action='store_true', help='Enable sharing')
+    args = parser.parse_args()
+
     # Choose the ui mode  
     ui_mode = "normal"
     
@@ -57,9 +61,9 @@ if __name__ == "__main__":
 
     # launch gradio
     app, _, _ = demo.queue(status_update_rate=1).launch(
-        server_name=server_name,
-        server_port=server_port,
-        prevent_thread_lock=True
+        prevent_thread_lock=True,
+        inbrowser=True,
+        share=args.share
     )
     
     # launch api

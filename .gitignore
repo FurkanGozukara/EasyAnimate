@@ -22,6 +22,8 @@ downloads/
 eggs/
 .eggs/
 lib/
+models
+models/
 lib64/
 parts/
 sdist/
